@@ -36,17 +36,14 @@ require_relative('../db/sql_runner')
 
 
 
-    def Album.find(artists_id)
-       sql = "SELECT * FROM albums
-       WHERE id = $1"
-       values = [artists_id]
-       results = SqlRunner.run(sql, values)
-       album_hash = results.first
-       album = Album.new(album_hash)
-       return album
-     end
-
-
+    def Album.artist(artist_id)
+    sql = "SELECT * FROM artists
+    WHERE artists_id = $1"
+    values = [artist_id]
+    artist = SqlRunner.run( sql,values )
+    result = Artist.new( artist.first )
+    return result
+  end
 
 
   end

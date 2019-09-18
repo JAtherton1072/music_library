@@ -37,9 +37,10 @@ new_album2 = Album.new(new_albums2)
 
 new_album1.save
 new_album2.save
-
-# # all_artists = Artist.all
+#
+# all_artists = Artist.all
 # all_albums = Album.all
-album_by_artist_id = Album.find(2)
+# all_album_by_artist_id = Artist.albums(2)
+get_artist_for_an_album = Album.artist(2)
 
 binding.pry

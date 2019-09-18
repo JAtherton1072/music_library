@@ -31,5 +31,18 @@ require_relative('../db/sql_runner')
     end
 
 
+    # def Artist.albums(artists_id)
+    #
+    # sql = "SELECT * FROM albums
+    # WHERE artists_id = $1"
+    # values = [artists_id]
+    # albums = SqlRunner.run( sql, values )
+    # result = albums.map { |album_hash| Album.new( album_hash ) }
+    # return result
+    #
+    # end
+
+
+
 
 end
